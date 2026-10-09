@@ -1,0 +1,155 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Project/Quartus/study
+T_opt
+!s110 1791273690
+Ve1WFoHfFI24Z_C;^72kYX2
+04 17 4 work tb_dac_phase1_top fast 0
+=1-089df4742624-6ac4aada-174-41f0
+!s124 OEM10U7 
+o-quiet -auto_acc_if_foreign -work work -L altera_mf_ver +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vasyn_fifo
+Z2 !s110 1791273617
+!i10b 1
+!s100 @K1NWomXXfnd?aWWHPM1o0
+IHT[XD?7@WnRJ3I`Ii8G0A1
+Z3 dC:/Project/Quartus/dac_phase1
+w1791181185
+8C:/Project/Quartus/dac_phase1/asyn_fifo.v
+FC:/Project/Quartus/dac_phase1/asyn_fifo.v
+!i122 29
+L0 40 56
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z6 !s108 1791273617.000000
+!s107 C:/Project/Quartus/dac_phase1/asyn_fifo.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Project/Quartus/dac_phase1/asyn_fifo.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vdac_phase1_top
+R2
+!i10b 1
+!s100 91=d6B^gTo6Ab5gm[TT>j2
+IaN]TRTo;l5g72Qii<?PWA3
+R3
+w1791273595
+8C:/Project/Quartus/dac_phase1/dac_phase1_top.v
+FC:/Project/Quartus/dac_phase1/dac_phase1_top.v
+!i122 30
+L0 1 124
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Project/Quartus/dac_phase1/dac_phase1_top.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Project/Quartus/dac_phase1/dac_phase1_top.v|
+!i113 0
+R7
+R1
+vdual_path_router
+R2
+!i10b 1
+!s100 c=QQeG_M?boVlQ;<C4H8n0
+Ia1B5;m45b2o^ijbNS?Pnb3
+R3
+w1791267461
+8C:/Project/Quartus/dac_phase1/dual_path_router.v
+FC:/Project/Quartus/dac_phase1/dual_path_router.v
+!i122 31
+L0 1 60
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Project/Quartus/dac_phase1/dual_path_router.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Project/Quartus/dac_phase1/dual_path_router.v|
+!i113 0
+R7
+R1
+vi2s_receiver
+R2
+!i10b 1
+!s100 Gd5Nm:A`l<6O^gUmfii1e0
+ITSGK4<F@gGgJc>0[ae12h0
+R3
+w1791265709
+8C:/Project/Quartus/dac_phase1/i2s_receiver.v
+FC:/Project/Quartus/dac_phase1/i2s_receiver.v
+!i122 32
+L0 1 64
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Project/Quartus/dac_phase1/i2s_receiver.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Project/Quartus/dac_phase1/i2s_receiver.v|
+!i113 0
+R7
+R1
+vpcm_consumer
+R2
+!i10b 1
+!s100 @4z2LziTOiSfVmoKL>P2j0
+IYe5oO0`m>?aRmj38KOcMl0
+R3
+w1791267464
+8C:/Project/Quartus/dac_phase1/pcm_consumer.v
+FC:/Project/Quartus/dac_phase1/pcm_consumer.v
+!i122 33
+L0 1 45
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Project/Quartus/dac_phase1/pcm_consumer.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Project/Quartus/dac_phase1/pcm_consumer.v|
+!i113 0
+R7
+R1
+vtb_dac_phase1_top
+R2
+!i10b 1
+!s100 5GL_k:gdYL;bZIX`ZPb_G1
+I[bhlJV`7L[lY]]fnNHUgV2
+R3
+w1791266654
+8C:/Project/Quartus/dac_phase1/tb_dac_phase1_top.v
+FC:/Project/Quartus/dac_phase1/tb_dac_phase1_top.v
+!i122 34
+L0 3 129
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Project/Quartus/dac_phase1/tb_dac_phase1_top.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Project/Quartus/dac_phase1/tb_dac_phase1_top.v|
+!i113 0
+R7
+R1

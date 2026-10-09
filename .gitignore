@@ -1,0 +1,16 @@
+# Quartus 무시 파일
+db/
+incremental_db/
+output_files/
+simulation/
+*.qws
+*.rpt
+*.done
+*.smsg
+
+# KiCad 무시 파일
+*.bak
+*.bck
+*-bak
+_autosave-*
+*.kicad_prl

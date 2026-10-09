@@ -1,0 +1,206 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2023  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+# Date created = 14:20:49  October 06, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		dac_phase1_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6F17C8
+set_global_assignment -name TOP_LEVEL_ENTITY dac_phase1_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:20:49  OCTOBER 06, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name VERILOG_FILE tb_dac_phase1_top.v
+set_global_assignment -name VERILOG_FILE dual_path_router.v
+set_global_assignment -name VERILOG_FILE asyn_fifo.v
+set_global_assignment -name VERILOG_FILE pcm_consumer.v
+set_global_assignment -name VERILOG_FILE dac_phase1_top.v
+set_global_assignment -name VERILOG_FILE i2s_receiver.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+# --- 1. XMOS Inputs & Controls (좌측 J2 최상단 4핀) ---
+set_location_assignment PIN_D14 -to xmos_data
+set_location_assignment PIN_C14 -to xmos_bclk
+set_location_assignment PIN_E11 -to xmos_lrck
+set_location_assignment PIN_D12 -to sel_mode
+
+# --- 2. DSD Outputs & Relay (상단 중앙 헤더) ---
+set_location_assignment PIN_N11 -to dsd_l_out
+set_location_assignment PIN_M12 -to dsd_r_out
+set_location_assignment PIN_G15 -to relay_ctrl
+set_location_assignment PIN_C11 -to xmos_dsd_r
+
+set_location_assignment PIN_M15 -to sys_clk
+set_location_assignment PIN_F13 -to rst_n
+
+# --- 3. Left Channel (R2R L) 24-bit (좌측 J2 헤더 위에서 아래로) ---
+set_location_assignment PIN_B14 -to r2r_l_out[23]
+set_location_assignment PIN_A15 -to r2r_l_out[22]
+set_location_assignment PIN_B13 -to r2r_l_out[21]
+set_location_assignment PIN_A14 -to r2r_l_out[20]
+set_location_assignment PIN_B12 -to r2r_l_out[19]
+set_location_assignment PIN_A13 -to r2r_l_out[18]
+set_location_assignment PIN_B11 -to r2r_l_out[17]
+set_location_assignment PIN_A12 -to r2r_l_out[16]
+set_location_assignment PIN_B10 -to r2r_l_out[15]
+set_location_assignment PIN_A11 -to r2r_l_out[14]
+set_location_assignment PIN_B9 -to r2r_l_out[13]
+set_location_assignment PIN_A10 -to r2r_l_out[12]
+set_location_assignment PIN_B8 -to r2r_l_out[11]
+set_location_assignment PIN_A9 -to r2r_l_out[10]
+set_location_assignment PIN_B7 -to r2r_l_out[9]
+set_location_assignment PIN_A8 -to r2r_l_out[8]
+set_location_assignment PIN_B6 -to r2r_l_out[7]
+set_location_assignment PIN_A7 -to r2r_l_out[6]
+set_location_assignment PIN_B5 -to r2r_l_out[5]
+set_location_assignment PIN_A6 -to r2r_l_out[4]
+set_location_assignment PIN_B4 -to r2r_l_out[3]
+set_location_assignment PIN_A5 -to r2r_l_out[2]
+set_location_assignment PIN_B3 -to r2r_l_out[1]
+set_location_assignment PIN_A4 -to r2r_l_out[0]
+
+# --- 4. Right Channel (R2R R) 24-bit (우측 J4 헤더 위에서 아래로) ---
+set_location_assignment PIN_P11 -to r2r_r_out[23]
+set_location_assignment PIN_K10 -to r2r_r_out[22]
+set_location_assignment PIN_L6 -to r2r_r_out[21]
+set_location_assignment PIN_M10 -to r2r_r_out[20]
+set_location_assignment PIN_P9 -to r2r_r_out[19]
+set_location_assignment PIN_N9 -to r2r_r_out[18]
+set_location_assignment PIN_P8 -to r2r_r_out[17]
+set_location_assignment PIN_N8 -to r2r_r_out[16]
+set_location_assignment PIN_K8 -to r2r_r_out[15]
+set_location_assignment PIN_M7 -to r2r_r_out[14]
+set_location_assignment PIN_T15 -to r2r_r_out[13]
+set_location_assignment PIN_R14 -to r2r_r_out[12]
+set_location_assignment PIN_T14 -to r2r_r_out[11]
+set_location_assignment PIN_R13 -to r2r_r_out[10]
+set_location_assignment PIN_T13 -to r2r_r_out[9]
+set_location_assignment PIN_R12 -to r2r_r_out[8]
+set_location_assignment PIN_T12 -to r2r_r_out[7]
+set_location_assignment PIN_R11 -to r2r_r_out[6]
+set_location_assignment PIN_R10 -to r2r_r_out[5]
+set_location_assignment PIN_T11 -to r2r_r_out[4]
+set_location_assignment PIN_R9 -to r2r_r_out[3]
+set_location_assignment PIN_T10 -to r2r_r_out[2]
+set_location_assignment PIN_T9 -to r2r_r_out[1]
+set_location_assignment PIN_R8 -to r2r_r_out[0]
+
+# --- I/O Standard: 3.3-V LVTTL 개별 할당 ---
+# 1. 시스템 클럭 및 리셋
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sys_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rst_n
+
+# 2. XMOS 입력 및 제어 핀
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xmos_data
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xmos_bclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xmos_lrck
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xmos_dsd_r
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sel_mode
+
+# 3. DSD 출력 및 릴레이 제어 핀
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to dsd_l_out
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to dsd_r_out
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to relay_ctrl
+
+# 4. R2R Left Channel 24-bit 개별 할당
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_l_out[0]
+
+# 5. R2R Right Channel 24-bit 개별 할당
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r2r_r_out[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

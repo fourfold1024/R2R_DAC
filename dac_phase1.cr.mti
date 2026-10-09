@@ -1,0 +1,36 @@
+C:/Project/Quartus/dac_phase1/asyn_fifo.v {1 {vlog -work work -vopt -stats=none C:/Project/Quartus/dac_phase1/asyn_fifo.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module asyn_fifo
+
+Top level modules:
+	asyn_fifo
+
+} {} {}} C:/Project/Quartus/dac_phase1/i2s_receiver.v {1 {vlog -work work -vopt -stats=none C:/Project/Quartus/dac_phase1/i2s_receiver.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module i2s_receiver
+
+Top level modules:
+	i2s_receiver
+
+} {} {}} C:/Project/Quartus/dac_phase1/dual_path_router.v {1 {vlog -work work -vopt -stats=none C:/Project/Quartus/dac_phase1/dual_path_router.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module dual_path_router
+
+Top level modules:
+	dual_path_router
+
+} {} {}} C:/Project/Quartus/dac_phase1/pcm_consumer.v {1 {vlog -work work -vopt -stats=none C:/Project/Quartus/dac_phase1/pcm_consumer.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module pcm_consumer
+
+Top level modules:
+	pcm_consumer
+
+} {} {}} C:/Project/Quartus/dac_phase1/tb_dac_phase1_top.v {1 {vlog -work work -vopt -stats=none C:/Project/Quartus/dac_phase1/tb_dac_phase1_top.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module tb_dac_phase1_top
+
+Top level modules:
+	tb_dac_phase1_top
+
+} {} {}}
